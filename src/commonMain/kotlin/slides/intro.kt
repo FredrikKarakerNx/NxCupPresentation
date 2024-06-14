@@ -1,35 +1,52 @@
 package slides
 
+import Title
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import nx_presentation.generated.resources.Res
-import nx_presentation.generated.resources.cup
 import net.kodein.cup.Slide
-import net.kodein.cup.ui.styled
+import nx_presentation.generated.resources.nextory
+import nx_presentation.generated.resources.wear_player
+import nx_presentation.generated.resources.wear_recents
 import org.jetbrains.compose.resources.painterResource
-import org.kodein.emoji.Emoji
-import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
-import org.kodein.emoji.smileys_emotion.face_smiling.Wink
 
 
 val intro by Slide {
-    Image(
-        painterResource(Res.drawable.cup),
-        contentDescription = "Compose ur Pres",
-        modifier = Modifier
-            .size(96.dp)
-            .clip(CircleShape)
-    )
-
-    Text(
-        text = "Hello, friend!",
-        style = MaterialTheme.typography.h1
-    )
-    TextWithPlatformEmoji(styled { "Welcome to ${+b}Compose ur Pres${-b}! ${Emoji.Wink}" })
+    Row(verticalAlignment = Alignment.Bottom) {
+        Image(
+            painterResource(Res.drawable.nextory),
+            contentDescription = null,
+            modifier = Modifier
+                .padding(bottom = 1.dp)
+                .height(20.dp),
+            contentScale = ContentScale.FillHeight
+        )
+        Title(
+            text = " on Wear OS",
+        )
+    }
+    Spacer(Modifier.height(24.dp))
+    Row {
+        Image(
+            painterResource(Res.drawable.wear_recents),
+            contentDescription = null,
+            modifier = Modifier
+                .size(120.dp)
+                .clip(CircleShape)
+        )
+        Spacer(Modifier.width(16.dp))
+        Image(
+            painterResource(Res.drawable.wear_player),
+            contentDescription = null,
+            modifier = Modifier
+                .size(120.dp)
+                .clip(CircleShape)
+        )
+    }
 }
