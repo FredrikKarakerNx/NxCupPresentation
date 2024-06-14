@@ -19,3 +19,5 @@ cup-export/
 
 ### Js ###
 node_modules/
+
+.fleet
