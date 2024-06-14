@@ -10,7 +10,7 @@ cup {
 
     // TODO: If you comment this (you don't want to export your presentation as a web page),
     //  you must remove the .github/workflows/pages.yml file as well.
-    targetWeb()
+    // targetWeb()
 }
 
 kotlin {
@@ -27,15 +27,9 @@ kotlin {
             // Allows to draw over the presentation on the main window.
             // This tool is also part of the Speaker Mode window.
             implementation(cup.plugin.laser)
-
-            // TODO: Select material or material3 (for composables such as Text).
-            implementation(compose.material)
-            implementation(cup.widgets.material)
-//            implementation(compose.material3)
-//            implementation(cup.widgets.material3)
-
-            implementation("org.kodein.emoji:emoji-compose-m2:2.0.1")
-//            implementation("org.kodein.emoji:emoji-compose-m3:2.0.1")
+            implementation(compose.material3)
+            implementation(cup.widgets.material3)
+            implementation("org.kodein.emoji:emoji-compose-m3:2.0.1")
         }
     }
 }
