@@ -82,6 +82,13 @@ val resources by Slide {
         Spacer(modifier = Modifier.height(8.dp))
 
         Link(
+            "Google | Horologist",
+            "https://google.github.io/horologist/"
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Link(
             "KodeinKoders | CuP: Compose ur Pres",
             "https://kodeinkoders.github.io/CuP/CuP/1.0/index.html"
         )

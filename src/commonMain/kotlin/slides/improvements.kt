@@ -1,6 +1,5 @@
 package slides
 
-import Title
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.MaterialTheme

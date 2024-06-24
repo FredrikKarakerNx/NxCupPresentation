@@ -50,6 +50,7 @@ val presentationSlides = Slides(
     simple,
     surfaces,
     wearComponents,
+    horologist,
     communication,
     code,
     improvements,
